@@ -1,25 +1,25 @@
 
 
 
-//find the smallest and largest string
+// reverse a string 
 public class prac {
         public static void main(String[] args) 
         {
         
-            String str="aAhellozZ";
-            char largest= str.charAt(0);
-            char smallest=str.charAt(0);
+            String str="vinod";
+            char[]newstr=str.toCharArray();
+            int i=0;
+            int j=newstr.length-1;
 
-            for(int i=0;i<str.length();i++){
-                if(str.charAt(i)>largest){
-                    largest=str.charAt(i);
-                }
-                if(str.charAt(i)<smallest){
-                    smallest=str.charAt(i);
-                }
+            while(i<j){
+                char temp=newstr[i];
+                newstr[i]=newstr[j];
+                newstr[j]=temp;
+                i++;
+                j--;
             }
-                  System.out.println(largest);//largest
-             System.out.println(smallest); //smallest
+              System.out.println(newstr);
+           
 
                      
              }
